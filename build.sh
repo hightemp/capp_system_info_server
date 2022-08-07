@@ -1,3 +1,3 @@
 #!/bin/bash
 
-nim -c main.nim
+nim c --out=capp_system_info_server main.nim

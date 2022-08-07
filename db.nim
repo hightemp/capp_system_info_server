@@ -16,7 +16,7 @@ import norm/pragmas
 
 import params
 
-var bResult = existsOrCreateDir("data")
+# var bResult = existsOrCreateDir("data")
 
 putEnv("DB_HOST", DB_HOST)
 

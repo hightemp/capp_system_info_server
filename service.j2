@@ -1,0 +1,13 @@
+[Unit]
+Description=This unit will start after internet connection
+After=network.target
+Wants=network-online.target
+
+[Service]
+Restart=always
+Type=simple
+ExecStart=/etc/systemd/system/{{ execstart }}
+Environment='SERVER_HOST={{ server_host }} SERVER_PORT={{ server_port }} SECRET_KEY={{ secret }}'
+
+[Install]
+WantedBy=multi-user.target

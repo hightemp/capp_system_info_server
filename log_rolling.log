@@ -1,0 +1,4 @@
+INFO Listen to: 0.0.0.0:8080 Secret: secret
+
+DEBUG Prologue is serving at http://0.0.0.0:8080 
+DEBUG Starting 1 threads

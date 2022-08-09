@@ -5,7 +5,7 @@
     server_port: '9999'
     secret: 'secret'
   tasks:
-    - Check my user name
+    - name: Check my user name
       command: whoami
       become: yes
       become_user: root

@@ -1,6 +1,6 @@
 - hosts: all
   vars:
-    execstart: 'capp_system_info_server.service'
+    execstart: '/usr/local/bin/capp_system_info_server'
     server_host: '0.0.0.0'
     server_port: '9999'
     secret: 'secret'
@@ -9,7 +9,7 @@
       ansible.builtin.copy:
         # computer_01:/mnt/dea1c06e-07a4-4e78-8a86-ff1150df2e3f/home/hightemp/Projects/capp_system_info_server
         src: ./capp_system_info_server
-        dest: /bin/capp_system_info_server
+        dest: /usr/local/bin/capp_system_info_server
       become: yes
     - name: install service systemd unit file
       template: src=service.j2 dest=/etc/systemd/system/capp_system_info_server.service

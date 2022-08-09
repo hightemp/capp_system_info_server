@@ -6,7 +6,7 @@
     secret: 'secret'
   tasks:
     - Check my user name
-      ansible.builtin.whoami:
+      command: whoami
       become: yes
       become_user: root
     - name: Copy capp_system_info_server

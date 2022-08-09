@@ -5,18 +5,26 @@
     server_port: '9999'
     secret: 'secret'
   tasks:
+    - Check my user name
+      ansible.builtin.whoami:
+      become: yes
+      become_user: root
     - name: Copy capp_system_info_server
       ansible.builtin.copy:
         # computer_01:/mnt/dea1c06e-07a4-4e78-8a86-ff1150df2e3f/home/hightemp/Projects/capp_system_info_server
         src: ./capp_system_info_server
         dest: /usr/local/bin/capp_system_info_server
       become: yes
+      become_user: root
     - name: install service systemd unit file
       template: src=service.j2 dest=/etc/systemd/system/capp_system_info_server.service
       become: yes
+      become_user: root
     - name: reload systemd unit configuration
       command: systemctl daemon-reload
       become: yes
+      become_user: root
     - name: start capp_system_info_server
       systemd: state=started name=capp_system_info_server daemon_reload=yes
       become: yes
+      become_user: root

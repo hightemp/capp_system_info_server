@@ -1,3 +1,4 @@
+# playbook - создание systemd сервиса, и копирование исполняемого файла
 - hosts: all
   vars:
     execstart: '/usr/local/bin/capp_system_info_server'
@@ -11,7 +12,6 @@
       become_user: root
     - name: Copy capp_system_info_server
       ansible.builtin.copy:
-        # computer_01:/mnt/dea1c06e-07a4-4e78-8a86-ff1150df2e3f/home/hightemp/Projects/capp_system_info_server
         src: ./capp_system_info_server
         dest: /usr/local/bin/capp_system_info_server
       become: yes

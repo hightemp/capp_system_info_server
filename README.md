@@ -1,9 +1,28 @@
 # capp_system_info_server
 
-Сервер для получения данных о состоянии сервера. (В первую очередь наполниность дисков)
+Сервер для получения данных о состоянии сервера. (В первую очередь своб. место на дисках)
 
-- добавлен shell
-- добавлен `api/current/*` для получения текущих значений для
+## Описания структуры
+
+## env
+
+SERVER_PORT=8080
+SERVER_HOST=0.0.0.0
+SECRET_KEY=secret - обязательный параметр для каждого запроса key=secret, является токеном
+DB_HOST=data/dbfile.db
+DB_DATABASE=
+DB_USER=
+DB_PASSWORD=
+
+## cli параметры
+
+* -p --port - сервер - порт
+* -h --host - сервер - хост
+
+## API
+
+- `api/shell/run_command` - /bin/bash shell
+- `api/current/*` - для получения текущих значений для
   - `/api/current/list_boot_time` - время загрузки сервра 
   - `/api/current/list_uptime` - время работы сервра 
   - `/api/current/list_pids` - 

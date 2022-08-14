@@ -6,13 +6,13 @@
 
 ## env
 
-SERVER_PORT=8080
-SERVER_HOST=0.0.0.0
-SECRET_KEY=secret - обязательный параметр для каждого запроса key=secret, является токеном
-DB_HOST=data/dbfile.db
-DB_DATABASE=
-DB_USER=
-DB_PASSWORD=
+- SERVER_PORT=8080
+- SERVER_HOST=0.0.0.0
+- SECRET_KEY=secret - обязательный параметр для каждого запроса key=secret, является токеном
+- DB_HOST=data/dbfile.db
+- DB_DATABASE=
+- DB_USER=
+- DB_PASSWORD=
 
 ## cli параметры
 
